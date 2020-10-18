@@ -95,7 +95,7 @@ x=np.zeros((numIter + 1,nDim))
 
 for k in range(numIter):
     x[k+1] = ((L+U)@x[k])/D + b/D
-    if k%10 is 0:
+    if k%10 == 0:
         print(norm(x[k+1] - x_true)/norm(x[k] - x_true))
 
 
@@ -135,10 +135,6 @@ x_true = np.random.randn(10)
 b=A@x_true
 
 x = jacobiIteration(A, b, numIter=1000)
-
-
-    
-
 
 
 
